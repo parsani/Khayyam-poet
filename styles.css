@@ -21,3 +21,8 @@ img {
   max-width: 350px;
   margin-top: -120%;
 }
+
+.dropdown-menu{
+  max-height: 303px;
+  overflow-y: auto;
+}
