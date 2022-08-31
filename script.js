@@ -1,6 +1,6 @@
-// const p = document.querySelectorAll("p");
 const next = document.querySelector(".nxt");
 const prev = document.querySelector(".pre");
+const ul = document.querySelector("ul");
 
 const poem = [
   {
@@ -81,8 +81,19 @@ const poem = [
   //   3: "",
   //   4: "",
   // },
-  
 ];
+
+
+
+poem.forEach((item, index) => {
+  const li = document.createElement("li");
+  const textNode = document.createTextNode(`${index + 1}`);
+  li.appendChild(textNode);
+  li.classList.add("dropdown-item");
+  ul.appendChild(li);
+});
+
+/* ------------------- || ----------------- */
 
 var slideIndex = 1;
 showSlides(slideIndex);
