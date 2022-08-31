@@ -19,6 +19,9 @@ img {
 
 .container {
   max-width: 350px;
-  margin-top: -125%;
+  margin-top: -120%;
 }
 
+.dropdown {
+  margin-left: 64%;
+}
