@@ -85,7 +85,6 @@ img {
 label {
   position: absolute;
   margin-right: 30px;
-  /* margin-top: -20px; */
 }
 
 .poem {
@@ -112,11 +111,3 @@ label {
 .check {
   position: absolute;
 }
-
-/* .one {
-  opacity: 35% !important;
-}
-
-.two {
-  opacity: 90%;
-} */

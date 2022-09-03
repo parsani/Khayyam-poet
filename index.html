@@ -21,7 +21,6 @@
     />
 
     <div class="container">
-      
       <form class="search">
         <div class="input-group mb-2">
           <button
@@ -42,11 +41,15 @@
           />
         </div>
       </form>
-      
-      <div class="poem card border-success">
 
+      <div class="poem card border-success">
         <label for="input-group-text check" class="my-1">خواندم</label>
-        <input class="form-check-input mx-2 my-2 check" type="checkbox" name="check" aria-label="Checkbox for following text input">
+        <input
+          class="form-check-input mx-2 my-2 check"
+          type="checkbox"
+          name="check"
+          aria-label="Checkbox for following text input"
+        />
 
         <div class="card-body">
           <h5 class="card-title text-dark mt-2 mb-3">رباعیات خیام</h5>
@@ -74,7 +77,18 @@
             </button>
           </div>
         </div>
+
       </div>
+
+      <div class="text-center">
+        <audio class="my-2 d-none" controls>
+          <source src="./audios/Ahmad Shamloo - 03 - Man Bi Mey E Nab Zistan.mp3" type="audio/mpeg">
+        </audio>
+        <audio class="my-2 d-none" controls>
+          <source src="./audios/Ahmad Shamloo - 02 - Chon Abr Be Norooz Rokh E.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      
     </div>
 
     <script src="script.js"></script>

@@ -1,8 +1,11 @@
 const search = document.querySelector(".search");
+const checkbox = document.querySelector(".poem");
 const next = document.querySelector(".nxt");
 const prev = document.querySelector(".pre");
 const ul = document.querySelector("ul");
 const h6 = document.querySelector("h6");
+
+const audio = document.querySelectorAll("audio");
 
 const poem = [
   {
@@ -676,7 +679,7 @@ const poem = [
     2: "",
     3: "",
     4: "",
-  }
+  },
 ];
 
 /* ----------------- Dropdown section --------------- */
@@ -708,6 +711,16 @@ function showSlides(n) {
     h6.innerText = `رباعی شمارهٔ ${slideIndex}`;
     item.innerText = poem[slideIndex - 1][index + 1];
   });
+
+  if (slideIndex === 47) {
+    Array.from(audio)[0].classList.remove("d-none");
+  } else if (slideIndex === 8) {
+    Array.from(audio)[1].classList.remove("d-none");
+  } else {
+    Array.from(audio).forEach(item => {
+      item.classList.add("d-none");
+    })
+  }
 }
 
 /* ------- select number of poetry in dropdown ------ */
@@ -743,3 +756,8 @@ search.addEventListener("submit", (e) => {
 
 /* ----------------- - section --------------- */
 
+// checkbox.addEventListener("click", (e) => {
+//   if(e.target.checked) {
+//     console.log(ul)
+//   }
+// })
