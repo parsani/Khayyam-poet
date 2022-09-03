@@ -1,3 +1,4 @@
+const search = document.querySelector(".search");
 const next = document.querySelector(".nxt");
 const prev = document.querySelector(".pre");
 const ul = document.querySelector("ul");
@@ -463,7 +464,7 @@ function showSlides(n) {
   });
 }
 
-/* ------- select number of poem in drop down ------ */
+/* ------- select number of poem in dropdown ------ */
 
 ul.addEventListener("click", (e) => {
   poem.forEach((item, index) => {
@@ -472,4 +473,28 @@ ul.addEventListener("click", (e) => {
       showSlides(slideIndex);
     }
   });
+});
+
+/* ----------------- search section --------------- */
+
+const findPoem = (text) => {
+  for (const key in poem) {
+    for (const x in poem[key]) {
+      if (poem[key][x].includes(text)) {
+        return Number(key)+1;
+      }
+    }
+  }
+};
+
+search.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const text = e.target[1].value;
+
+  slideIndex = findPoem(text);
+
+  showSlides(slideIndex);
+
+  
 });
