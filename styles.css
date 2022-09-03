@@ -82,6 +82,12 @@ img {
   position: relative;
 }
 
+label {
+  position: absolute;
+  margin-right: 30px;
+  /* margin-top: -20px; */
+}
+
 .poem {
   text-align: center;
   position: absolute;
@@ -102,3 +108,15 @@ img {
 .search {
   position: relative;
 }
+
+.check {
+  position: absolute;
+}
+
+/* .one {
+  opacity: 35% !important;
+}
+
+.two {
+  opacity: 90%;
+} */
