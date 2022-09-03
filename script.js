@@ -623,7 +623,7 @@ poem.forEach((item, index) => {
   ul.appendChild(li);
 });
 
-/* ------------------- poem display ----------------- */
+/* ------------------- poetry display ----------------- */
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -644,7 +644,7 @@ function showSlides(n) {
   });
 }
 
-/* ------- select number of poem in dropdown ------ */
+/* ------- select number of poetry in dropdown ------ */
 
 ul.addEventListener("click", (e) => {
   poem.forEach((item, index) => {
@@ -669,8 +669,11 @@ const findPoem = (text) => {
 
 search.addEventListener("submit", (e) => {
   e.preventDefault();
-  const text = e.target[1].value;
+  const text = e.target[1].value.trim();
 
   slideIndex = findPoem(text);
   showSlides(slideIndex);
 });
+
+/* ----------------- - section --------------- */
+
