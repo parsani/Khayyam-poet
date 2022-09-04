@@ -86,9 +86,6 @@
   
   img {
     position: relative;
-
-    /* width: 100%; */
-    height: auto;
   }
   
   label {
@@ -105,7 +102,7 @@
   
   .container {
     max-width: 85%;
-    margin-top: -140%;
+    margin-top: -145%;
   }
   
   .dropdown-menu{
