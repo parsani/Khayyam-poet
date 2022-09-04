@@ -663,23 +663,53 @@ const poem = [
     4: "اندک خور و گه گاه خور و پنهان خور",
   },
   {
-    1: "",
-    2: "",
-    3: "",
-    4: "",
+    1: "وقت سحر است خیز ای طرفه پسر",
+    2: "پر بادهٔ لعل کن بلورین ساغر",
+    3: "کاین یکدم عاریت در این کنج فنا",
+    4: "بسیار بجویی و نیابی دیگر",
   },
   {
-    1: "",
-    2: "",
-    3: "",
-    4: "",
+    1: "از جملهٔ رفتگان این راه دراز",
+    2: "باز آمده کیست تا به ما گوید راز",
+    3: "پس بر سر این دو راههٔ آز و نیاز",
+    4: "تا هیچ نمانی که نمی‌آیی باز",
   },
   {
-    1: "",
-    2: "",
-    3: "",
-    4: "",
+    1: "ای پیر خردمند پگه‌تر برخیز",
+    2: "و آن کودک خاکبیز را بنگر تیز",
+    3: "پندش ده گو که نرم نرمک می‌بیز",
+    4: "مغز سر کیقباد و چشم پرویز",
   },
+  {
+    1: "وقت سحر است خیز ای مایه ناز",
+    2: "نرمک نرمک باده خور و چنگ نواز",
+    3: "کانها که بجایند نپایند بسی",
+    4: "و آنها که شدند کس نمیاید باز",
+  },
+  {
+    1: "مرغی دیدم نشسته بر باره طوس",
+    2: "در پیش نهاده کله کیکاووس",
+    3: "با کله همی گفت که افسوس افسوس",
+    4: "کو بانگ جرسها و کجا ناله کوس",
+  },
+  {
+    1: "جامی است که عقل آفرین میزندش",
+    2: "صد بوسه ز مهر بر جبین میزندش",
+    3: "این کوزه‌گر دهر چنین جام لطیف",
+    4: "می‌سازد و باز بر زمین میزندش",
+  },
+  {
+    1: "خیام اگر ز باده مستی خوش باش",
+    2: "با ماهرخی اگر نشستی خوش باش",
+    3: "چون عاقبت کار جهان نیستی است",
+    4: "انگار که نیستی چو هستی خوش باش",
+  },
+  // {
+  //   1: "",
+  //   2: "",
+  //   3: "",
+  //   4: "",
+  // }
 ];
 
 /* ----------------- Dropdown section --------------- */
@@ -691,6 +721,28 @@ poem.forEach((item, index) => {
   li.classList.add("dropdown-item");
   ul.appendChild(li);
 });
+
+/* ----------------- audio section --------------- */
+
+const displayAudio = (slideIndex) => {
+  switch (slideIndex) {
+    case 47:
+      Array.from(audio)[0].classList.remove("d-none");
+      break;
+    case 8:
+      Array.from(audio)[1].classList.remove("d-none");
+      break;
+    case 66:
+      Array.from(audio)[2].classList.remove("d-none");
+      break;
+
+    default:
+      Array.from(audio).forEach((item) => {
+        item.classList.add("d-none");
+      });
+      break;
+  }
+};
 
 /* ------------------- poetry display ----------------- */
 
@@ -712,15 +764,7 @@ function showSlides(n) {
     item.innerText = poem[slideIndex - 1][index + 1];
   });
 
-  if (slideIndex === 47) {
-    Array.from(audio)[0].classList.remove("d-none");
-  } else if (slideIndex === 8) {
-    Array.from(audio)[1].classList.remove("d-none");
-  } else {
-    Array.from(audio).forEach(item => {
-      item.classList.add("d-none");
-    })
-  }
+  displayAudio(slideIndex);
 }
 
 /* ------- select number of poetry in dropdown ------ */
@@ -751,13 +795,5 @@ search.addEventListener("submit", (e) => {
   const text = e.target[1].value.trim();
 
   slideIndex = findPoem(text);
-  showSlides(slideIndex);
+  if (slideIndex) showSlides(slideIndex);
 });
-
-/* ----------------- - section --------------- */
-
-// checkbox.addEventListener("click", (e) => {
-//   if(e.target.checked) {
-//     console.log(ul)
-//   }
-// })
