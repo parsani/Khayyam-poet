@@ -939,7 +939,7 @@ poem.forEach((item, index) => {
   }
 });
 
-/* ----------------- audio section --------------- */
+/* ----------------- audio display section --------------- */
 
 const displayAudio = (slideIndex) => {
   switch (slideIndex) {
