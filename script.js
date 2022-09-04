@@ -942,6 +942,9 @@ poem.forEach((item, index) => {
 /* ----------------- audio display section --------------- */
 
 const displayAudio = (slideIndex) => {
+  Array.from(audio).forEach((item) => {
+    item.classList.add("d-none");
+  });
   switch (slideIndex) {
     case 132:
     case 47:
@@ -961,17 +964,11 @@ const displayAudio = (slideIndex) => {
       break;
     case 0:
     case 150:
-      Array.from(audio)[3].classList.remove("d-none");
+      Array.from(audio)[4].classList.remove("d-none");
       break;
     case 0:
     case 62:
-      Array.from(audio)[3].classList.remove("d-none");
-      break;
-
-    default:
-      Array.from(audio).forEach((item) => {
-        item.classList.add("d-none");
-      });
+      Array.from(audio)[5].classList.remove("d-none");
       break;
   }
 };
