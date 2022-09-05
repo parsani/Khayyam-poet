@@ -1087,6 +1087,7 @@ poem.forEach((item, index) => {
   ul.appendChild(li);
 
   if (
+    Number(textNode.data) === 2 ||
     Number(textNode.data) === 8 ||
     Number(textNode.data) === 14 ||
     Number(textNode.data) === 47 ||
@@ -1094,6 +1095,7 @@ poem.forEach((item, index) => {
     Number(textNode.data) === 24 ||
     Number(textNode.data) === 37 ||
     Number(textNode.data) === 42 ||
+    Number(textNode.data) === 43 ||
     Number(textNode.data) === 53 ||
     Number(textNode.data) === 54 ||
     Number(textNode.data) === 60 ||
@@ -1131,7 +1133,6 @@ const displayAudio = (slideIndex) => {
       Array.from(audio)[0].classList.remove("d-none");
       break;
     case 24:
-    case 8:
       Array.from(audio)[1].classList.remove("d-none");
       break;
     case 0:
@@ -1189,6 +1190,14 @@ const displayAudio = (slideIndex) => {
     case 0:
     case 14:
       Array.from(audio)[15].classList.remove("d-none");
+      break;
+    case 2:
+    case 43:
+      Array.from(audio)[16].classList.remove("d-none");
+      break;
+    case 8:
+      Array.from(audio)[1].classList.remove("d-none");
+      Array.from(audio)[16].classList.remove("d-none");
       break;
   }
 };
