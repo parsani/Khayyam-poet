@@ -89,6 +89,13 @@
     position: absolute;
     margin-right: 30px;
   }
+
+  audio {
+    width: 100%;
+  }
+  audio::-webkit-media-controls-panel {
+    background-color: #B1D7B4;
+  }
   
   .poem {
     text-align: center;

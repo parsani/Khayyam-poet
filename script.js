@@ -1111,6 +1111,14 @@ poem.forEach((item, index) => {
   }
 });
 
+/* --------------------- pause audio -------------------- */
+
+const pauseAudio = () => {
+  audio.forEach((item) => {
+    item.pause();
+  });
+};
+
 /* ----------------- audio display section --------------- */
 
 const displayAudio = (slideIndex) => {
@@ -1205,6 +1213,7 @@ function showSlides(n) {
     item.innerText = poem[slideIndex - 1][index + 1];
   });
 
+  pauseAudio();
   displayAudio(slideIndex);
 }
 
